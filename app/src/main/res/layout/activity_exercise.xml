@@ -5,13 +5,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ExerciseActivity">
 
-    <android.widget.Toolbar
-        android:id="@+id/exercise_action_toolbar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="#FFFFFF"
-        >
-    </android.widget.Toolbar>
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:id="@+id/workoutProgressBar"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:indeterminate="false"
+                android:layout_centerInParent="true"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                android:background="@drawable/circle_shape"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:max="10000"
+                android:progress="0"/>
+
+            <Button
+                android:id="@+id/workoutButton"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/circle_button"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Start"
+                android:onClick="startWorkout"
+                android:layout_centerInParent="true"
+                android:textColor="#000"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 
 </RelativeLayout>
